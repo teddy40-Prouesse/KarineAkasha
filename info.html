@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karinehaisha - Informations</title>
+    <style>
+   body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+    background-image: url('fond2.png'); /* Ajout de l'image de fond */
+    background-size: 90%; /* Ajuste la taille de l'image */
+    background-position: center; /* Centre l'image */
+    background-attachment: fixed; /* Fixe l'image lors du défilement */
+}
+
+
+
+section  {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: transparent; /* Rend le fond transparent */
+    border-radius: 0; /* Supprime l'arrondi des coins */
+    box-shadow: none; /* Supprime l'ombre */
+}
+
+h2 {
+    color: #fcbb5a; /* Couleur du texte des titres */
+    font-size: 40px; /* Augmentation de la taille du texte */
+    font-weight: bold;  /* gras/normal */
+    font-family: 'Lucida Console', Monospace; /* police! */
+    
+    /* Autres propriétés CSS si nécessaire */
+
+}
+
+p {
+    color: #1ec2ef; /* Couleur du texte des paragraphes */
+    font-size: 25px; /* Augmentation de la taille du texte */
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: 'Impact ', fantasy; /* police!*/
+    
+    /* Autres propriétés CSS si nécessaire */
+}
+h1{
+    color: #1ec2ef; /* Couleur du texte des paragraphes */
+    font-size: 25px; /* Augmentation de la taille du texte */
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: 'Impact ', fantasy; /* police!*/
+    
+    /* Autres propriétés CSS si nécessaire */
+}
+
+        header {
+            background-color: #1a1a1a; /* Couleur de fond de l'en-tête */
+            padding: 20px;
+            text-align: center;
+            color: #fff; /* Couleur du texte de l'en-tête */
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #000000; /* Couleur du menu burger */
+        }
+
+        nav {
+            background-color: #333; /* Couleur de fond du menu */
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ecf0f1; /* Couleur des liens dans le menu */
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            nav.show {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <h1>KARINEAKASHA </h1>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<section>
+    <h2>Lecture Akashique</h2>
+    <p>La Lecture Akashique, une pratique ancestrale, offre un voyage profond dans les archives de l'âme, révélant les énergies, les expériences et les connaissances accumulées à travers le temps. Ces archives, connues sous le nom d'Akasha, renferment la sagesse universelle et les histoires de chaque être.</p>
+
+
+    <h2>Durée de 1h30</h2>
+    <p>Chaque session de lecture akashique a une durée de 1h30, permettant une immersion profonde dans le contenu tout en respectant le temps de concentration optimal.</p>
+
+
+
+    <h2>Formation sur la Lecture</h2>
+    <p>Notre formation sur la Lecture Akashique est une invitation à explorer les mystères des archives de l'âme. Conçue pour ceux qui aspirent à une compréhension plus profonde de leur existence et du cosmos, cette formation offre un voyage fascinant dans le monde de la sagesse universelle.</p>
+</section>
+
+<div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+
+<script>
+    function toggleMenu() {
+        document.querySelector('nav').classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>

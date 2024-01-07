@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karinehaisha - Contact</title>
+    <style>
+     body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Couleur de fond */
+    background-image: url('fond3.png'); /* Ajout de l'image de fond */
+    background-size: 90%; /* Ajuste la taille de l'image */
+    background-position: center; /* Centre l'image */
+     }
+
+        header {
+            background-color: #1a1a1a; /* Couleur de fond de l'en-tête */
+            padding: 20px;
+            text-align: center;
+            color: #fff; /* Couleur du texte de l'en-tête */
+        }
+
+        nav {
+            background-color: #333; /* Couleur de fond du menu */
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ecf0f1; /* Couleur des liens dans le menu */
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    
+}
+
+section {
+    margin-bottom: 20px;
+    
+}
+
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #1ec2ef; /* Couleur du texte du label */
+            font-weight: bold;
+            font-family: 'Lucida Console', Monospace; /* Serif font */
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc; /* Ajout d'une bordure */
+            border-radius: 5px; /* Coins arrondis */
+        }
+
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc; /* Ajout d'une bordure */
+            border-radius: 5px; /* Coins arrondis */
+        }
+
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc; /* Ajout d'une bordure */
+            border-radius: 5px; /* Coins arrondis */
+        }
+
+         input[ type="submit"] {
+            background-color: #1ec2efdf;
+            color: #fffafa;
+            
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #000000; /* Couleur du menu burger */
+        }
+ @media only screen and (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            nav.show {
+                display: block;
+            }
+        }
+        h1{
+    color: #1ec2ef; /* Couleur du texte des paragraphes */
+    font-size: 25px; /* Augmentation de la taille du texte */
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-family: 'Impact ', fantasy; /* police!*/
+    
+    /* Autres propriétés CSS si nécessaire */
+}
+h2{ 
+    color: #fcbb5a; /* Couleur du texte des paragraphes */
+    font-size: 20px; /* Augmentation de la taille du texte */
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-family: 'Lucida Console', Monospace; /* police! */
+    
+    /* Autres propriétés CSS si nécessaire */
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <h1>KARINEAKASHA</h1>
+    <h2>Contact et prise de rendez-vous</h2>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="info.html">Informations</a>
+</nav>
+
+<form action="https://formspree.io/f/mkndwwdg" method="POST">
+    <label for="name">Votre Nom et prénom :</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phone">Numéro de téléphone :</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <label for="email">Votre E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="soin">Choix du service:</label>
+    <select id="soin" name="soin">
+        <option value="lectures haks">Lecture Akashique en présentiel</option>
+        <option value="lectures haks">Lecture Akashique à distance</option>
+        <option value="formation">formation</option>
+        <!-- Autres options -->
+    </select>
+
+    <label for="date">Choisissez une date :</label>
+<input type="date" id="date" name="date" required min="">
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var today = new Date().toISOString().split('T')[0];
+        document.getElementById("date").setAttribute('min', today);
+    });
+</script>
+
+
+    <label for="time">Choisissez une heure:</label>
+<select id="time" name="time" required></select>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var select = document.getElementById("time");
+        var heureDebut = 9; // 9 heures du matin
+        var heureFin = 18; // 18 heures
+
+        for(var heure = heureDebut; heure < heureFin; heure += 1.5) {
+            var heureValue = Math.floor(heure);
+            var minutesValue = (heure - heureValue) * 60;
+            var heureAffichage = heureValue.toString().padStart(2, '0') + ":" + minutesValue.toString().padStart(2, '0');
+            var option = document.createElement("option");
+            option.value = heureAffichage;
+            option.text = heureAffichage;
+            select.appendChild(option);
+        }
+    });
+</script>
+
+
+    <input type="submit" value="Envoyer">
+</form>
+
+<div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+
+<script>
+    function toggleMenu() {
+        document.querySelector('nav').classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>
